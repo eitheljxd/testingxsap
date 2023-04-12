@@ -4,7 +4,7 @@ pipeline {
         stage('Running tests cases') {
             steps {
                       sh "mvn clean install -DskipTests"
-                      sh "mvn -Dmaven.test.failure.ignore=true"
+                      sh " mvn test -Dmaven.test.failure.ignore=true"
 
             }
         }
